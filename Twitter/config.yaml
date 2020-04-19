@@ -1,0 +1,6 @@
+# Twitter keys/tokens - obtain yours from https://developer.twitter.com/en/apps
+'CONSUMER_KEY': 'xxxxxxxxxxxxxxxxxxxxx'
+'CONSUMER_SECRET': 'xxxxxxxxxxxxxxxxxxxxx'
+'ACCESS_TOKEN': 'xxxxxxxxxxxxxxxxxxxxx'
+'ACCESS_TOKEN_SECRET': 'xxxxxxxxxxxxxxxxxxxxx'
+

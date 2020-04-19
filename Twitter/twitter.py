@@ -13,14 +13,13 @@ def get_twitter_api_credentials(config_file):
         raise Exception('Bad config file (need api keys): ' + config_file)
     return vals['CONSUMER_KEY'], vals['CONSUMER_SECRET'], vals['ACCESS_TOKEN'], vals['ACCESS_TOKEN_SECRET']
 
-def api(config_file='./twitter/config.yaml'):
+def get_api(config_file='./twitter/config.yaml'):
     consumer_key, consumer_secret, access_token, access_token_secret = get_twitter_api_credentials(config_file)
     api = TwitterAPI(consumer_key, consumer_secret, access_token, access_token_secret)
     return api
 
 def request(api=None, endpoint=None, params=None):
     if not api:
-        from .util import connect_api
-        api = connect_api()
+        api = get_api()
     response = api.request(endpoint, params)
     return response.json()
